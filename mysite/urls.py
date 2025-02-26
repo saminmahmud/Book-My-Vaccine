@@ -3,11 +3,9 @@ from django.urls import path, include
 from mysite import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.generic.base import TemplateView 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',TemplateView.as_view(template_name="mysite/base.html")), 
     path('', views.index, name='index'),
     path('center/', include('center.urls', namespace='center')),
     path('vaccine/', include('vaccine.urls', namespace='vaccine')),

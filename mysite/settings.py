@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'vaccine',
 ]
 
+AUTH_USER_MODEL = 'user.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -142,7 +144,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'user.User'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
